@@ -1,0 +1,811 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+}
+
+.Container{
+    background-color: #010f1d;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.Header{
+    background-color: #010f1d;
+    border-bottom: 1px solid #1a2431;
+    height: 80px;
+    max-height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.Header img{
+    width: 70px;
+    height: 85%;
+    z-index: 1;
+}
+
+.Header button{
+    width: 110px;
+    min-width: 110px;
+    height: 35px;
+    background-color: #1e2328;
+    border: 2px solid #063d53;
+    position: relative;
+    left: -30px;
+    top: 1px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 1px;
+}
+
+.Header button:hover{
+    box-shadow: 0px 0px 2px 0px #4e9ea6;
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(200, 185, 142, 0.2), rgb(22, 29, 36, 0.2));
+}
+
+.Games{
+    height: 100%;
+    display: flex;
+}
+
+.Games p:nth-child(1n){
+    width: 80px;
+    height: 100%;
+    position: relative;
+    top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    color: #b4a983;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+
+.Games p:nth-child(1n):hover{
+    background: linear-gradient(to top, rgb(180, 169, 131, 0.3), rgb(180, 169, 131, 0), rgb(180, 169, 131, 0));
+    cursor: pointer;
+}
+
+.Inventory{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.Inventory img{
+    width: 17px;
+    height: 17px;
+    margin: 0px 15px;
+}
+
+.Inventory p{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Inventory p:nth-child(1n):hover{
+    background: linear-gradient(to top, rgb(180, 169, 131, 0.3), rgb(180, 169, 131, 0), rgb(180, 169, 131, 0));
+    cursor: pointer;
+}
+
+
+.BlueRP{
+    position: relative;
+    height: 100%;
+    width: 160px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BlueRP::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    background-color: #464842;
+    left: 0px;
+    border-radius: 50%;
+}
+
+.BlueRP img{
+    width: 50px;
+    height: 35px;
+}
+
+.Content {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 5% 30% 65%;
+}
+
+.Menu{
+    background-color: #010f1d;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.Menu p:nth-child(1n):hover{
+    cursor: pointer;
+    border-left: 3px solid #bf953b;
+}
+
+.Menu p{
+    margin: 0;
+    padding: 0;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MyItems{
+    padding: 5px 0px;
+    height: 100vh;
+}
+
+.Filters{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 5%;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.Filters input{
+    width: 70%;
+    height: 85%;
+    background-color: #00050a; 
+    border: 1px solid #605232;
+    color: #b4a983;
+    padding: 0px 20px;
+    font-family: 'PT Serif', serif;
+}
+
+.Filters input::placeholder{
+    padding: 0px 5px;
+    font-size: 0.8em;
+    font-family: 'PT Serif', serif;
+}
+
+.Filters input:focus{
+    box-shadow: 0px 0px 2px 0px #c8b98e;
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(200, 185, 142, 0.2), rgb(22, 29, 36, 0.2));
+}
+
+.Filters select{
+    appearance: none;
+    height: 90%;
+    width: 30%;
+    margin-left: 2px;
+    padding: 0px 5px;
+    background: linear-gradient(to right, #0f1a24, #0f1922);
+    color: #b4a983;
+    font-size: 0.7em;
+    border: 1px solid #605232;
+    cursor: pointer;
+    font-family: 'PT Serif', serif;
+}
+
+.Filters select:hover{
+    box-shadow: 0px 0px 2px 0px #c8b98e;
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(200, 185, 142, 0.2), rgb(22, 29, 36, 0.2));
+}
+
+.Filters i:last-child{
+    position: absolute;
+    right: 17px;
+    color: #b4a983;
+    font-size: 0.7em;
+}
+
+.Filters i:first-child{
+    position: absolute;
+    left: 17px;
+    color: #b4a983;
+    font-size: 0.7em;
+}
+
+option{
+    color: #b4a983;
+    font-size: 1em;
+    background-color: #00050a; 
+}
+
+.Materials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 72vh;
+    overflow: auto;
+}
+
+.Materials::-webkit-scrollbar{
+    width: 4px;
+    background: none;
+}
+.Materials::-webkit-scrollbar-thumb{
+    background-color: #664e25;
+    border-radius: 5px;
+}
+
+.Materials p:nth-child(1n){
+    color: #757670;
+    border-bottom: 1px solid #605232;
+    grid-column: 1 / -1;
+    margin: 10px 10px;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+.Materials img{
+    margin: 10px 10px;
+    width: 60px;
+    height: 60px;
+    grid-column: span 1;
+    border: 2px solid #605232;
+    cursor: pointer;
+}
+
+.Count{
+    height: 10%;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.Count button{
+    height: 40%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #161d24;
+    border: 2px solid #c8b98e;
+    color: #c8b98e;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.Count button:hover{
+    box-shadow: 0px 0px 2px 0px #c8b98e;
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(200, 185, 142, 0.2), rgb(22, 29, 36, 0.2));
+}
+
+.Count img:nth-child(2){
+    position: absolute;
+    right: 30px;
+}   
+
+.View{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.BtnChest{
+   position: absolute;
+   bottom: 20px;
+}
+
+.Chest{
+    animation: Chest 5s infinite;
+ }
+
+ @keyframes Chest{
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(-7%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+ }
+
+.BtnChest button{
+    margin: 0px 5px;
+    width: 80px;
+    height: 30px;
+    border: 2px solid #444848;
+    color: #444848;
+    background-color: #1e2328;
+    font-family: 'PT Serif', serif;
+}
+
+.Aside{
+    position: absolute;
+    height: 100vh;
+    width: 20%;
+    background: linear-gradient(to top, #020c16, #091b2a);
+    right: 0px;
+    top: 0px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.User{
+    border-bottom: 1px solid #1a2431;
+    height: 80px;
+    max-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Level{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Level img{
+    width: 45px;
+    border-radius: 50%;
+    border: 6px double #605232;
+    cursor: pointer;
+}
+
+.Level::before{
+    content: '78';
+    font-size: 0.6em;
+    color: #c8b98e;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 25px;
+    height: 13px;
+    background-color: #0f1a24;
+    bottom: 10px;
+    border: 1px solid #605232;
+    cursor: pointer;
+}
+
+.Level:hover::before, .Level:hover img{
+    border-color: #c8b98e !important;
+}
+
+.GroupConfig{
+    height: 30%;
+    color: #878579;
+    cursor: pointer;
+    font-size: 0.7em;
+    text-align: right;
+}
+
+.GroupConfig i{
+    margin: 8px 10px;
+}
+
+.GroupConfig i:hover{
+    color: #c8b98e;
+}
+
+.UserName p{
+    height: 30%;
+    color: #878579;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.Status{
+    display: flex;
+    height: 40%;
+    align-items: center;
+}
+
+.Status i{
+    font-size: 0.7em; 
+    margin-right: 5px; 
+    background-color: #2c7551; 
+    color: #59db8e; 
+    border-radius: 50%; 
+    cursor: pointer;
+}
+
+.Status p{
+    font-size: 0.8em; 
+    color: #2c7551; 
+    font-weight: bold;
+}
+
+.Social{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+.Social p{
+    margin: 0; 
+    color: #878579; 
+    font-size: 0.8em; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    line-height: 25px;
+}
+
+.GroupSocial i{
+    color: #878579;
+    padding: 0px 5px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.GroupSocial i:hover{
+    color: #c8b98e;
+}
+
+.OnlineCount p{
+    background: #051522; 
+    margin: 5px 0px;
+    padding: 5px 5px; 
+    color: #878579; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+    font-size: 0.8em;
+}
+
+.OnlineCount p:hover{
+    cursor: pointer;
+    background: rgb(33, 48, 60);
+}
+
+.FriendList{
+    height: 75vh;
+    overflow: auto;
+}
+
+.FriendList::-webkit-scrollbar{
+    width: 4px;
+    background: none;
+}
+.FriendList::-webkit-scrollbar-thumb{
+    background-color: #664e25;
+    border-radius: 5px;
+}
+
+.Online{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 7%;
+    min-height: 7%;
+    padding: 5px 0px;
+} 
+.Online:hover{
+    cursor: pointer;
+    background: rgb(33, 48, 60);
+}
+
+
+.Avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Avatar img{
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #755b24;
+    cursor: pointer;
+}
+
+.Avatar::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #2c7551;
+    border-radius: 50%;
+    border: 2px solid #59db8e;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+}
+
+
+.NickStatus{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.NickStatus p:nth-child(1){
+    margin: 0;
+    padding: 0;
+    color: #878579;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.NickStatus p:nth-child(2){
+    margin: 0;
+    padding: 0;
+    color: #2c7551;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.Playing{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 7%;
+    min-height: 7%;
+    padding: 5px 0px;
+} 
+.Playing:hover{
+    cursor: pointer;
+    background: rgb(33, 48, 60);
+}
+
+.Avatar2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Avatar2 img{
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #755b24;
+    cursor: pointer;
+}
+
+.Avatar2::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #157f92;
+    border-radius: 50%;
+    border: 2px solid #0ccee7;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+}
+
+.NickStatus2{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.NickStatus2 p:nth-child(1){
+    margin: 0;
+    padding: 0;
+    color: #878579;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+ .NickStatus2 p:nth-child(2){
+    margin: 0;
+    padding: 0;
+    color: #07798c;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.Absent{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 7%;
+    min-height: 7%;
+    padding: 5px 0px;
+} 
+.Absent:hover{
+    cursor: pointer;
+    background: rgb(33, 48, 60);
+}
+
+.Avatar3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Avatar3 img{
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #755b24;
+    cursor: pointer;
+}
+
+.Avatar3::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: rgb(153, 29, 29);
+    border-radius: 50%;
+    border: 2px solid rgb(238, 51, 51);
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+}
+
+.NickStatus3{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.NickStatus3 p:nth-child(1){
+    margin: 0;
+    padding: 0;
+    color: #878579;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+ .NickStatus3 p:nth-child(2){
+    margin: 0;
+    padding: 0;
+    color: #4b5050;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.Offline{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 7%;
+    min-height: 7%;
+    padding: 5px 0px;
+} 
+.Offline:hover{
+    cursor: pointer;
+    background: rgb(33, 48, 60);
+}
+
+.Avatar4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Avatar4 img{
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #755b24;
+    cursor: pointer;
+}
+
+.Avatar4::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: rgba(39, 39, 39, 0.863);
+    border-radius: 50%;
+    border: 2px solid #4b5050;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+}
+
+.NickStatus4{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.NickStatus4 p:nth-child(1){
+    margin: 0;
+    padding: 0;
+    color: #878579;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.NickStatus4 p:nth-child(2){
+    margin: 0;
+    padding: 0;
+    color: #4b5050;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.Version {
+    display: flex;
+    align-items: flex-end;
+    height: 6%;
+    position: relative;
+}
+
+.Version button:nth-child(1n){
+    height: 70%;
+    width: 15%;
+    background: linear-gradient(to right, #0f1a24, #0f1922);
+    color: #b4a983;
+    border: 1px solid #605232;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.Version button:nth-child(4){
+    height: 70%;
+    width: 55%;
+    background: linear-gradient(to right, #0f1a2417, #0f192211);
+    color: #b4a983;
+    border: 1px solid #605232;
+    cursor: pointer;
+    font-size: 0.5EM;
+    margin-right: 5px;
+    text-align: left;
+}
+
+.Version button:nth-child(5){
+    height: 50%;
+    width: 10%;
+    background: linear-gradient(to right, #0f1a24, #0f1922);
+    color: #b4a983;
+    border: 1px solid #605232;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 0.7em;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.Version button:nth-child(1n):hover{
+
+    box-shadow: 0px 0px 2px 0px #c8b98e;
+        cursor: pointer;
+        background: linear-gradient(to top, rgb(200, 185, 142, 0.2), rgb(22, 29, 36, 0.2));
+}
+.Dissconected{
+    background: none !important;
+    color: rgba(255, 0, 0, 0.774) !important;
+}
+.DissconectedP{
+    color: #5c5e5a !important;
+}
+
+.Rotate{
+    transform: rotate(-90deg);
+}
+
+.Hidden{
+    visibility: hidden !important;
+}
+.Name{
+    width: 70%;
+    height: 100%;
+}
+
+
+

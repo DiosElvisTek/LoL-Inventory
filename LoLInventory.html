@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="LoLInventory.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <title>LoL-Invetory</title>
+</head>
+<body onload="AddList()">
+    
+    <div class="Container">
+
+        <header class="Header"> 
+            <img src="LoL-Icon.png">
+            <button>JUEGA</button>
+                <div class="Games">
+                    <p>INICIO</p>
+                    <p>TFT</p>
+                    <p>CLASH</p>
+                </div>
+                <div class="Inventory">
+                    <p> <img src="Profile-Icon.png"> </p>
+                    <p> <img src="Backpack-Icon.png"> </p>
+                    <p> <img src="Items-Icon.png"> </p>
+                    <p> <img src="Shop-Icon.png"> </p>
+                    <p> <img src="Money-Icon.png"> </p>
+                </div>
+                <div class="BlueRP">
+                    <img src="BlueRP-Icon.png" title="RP / Blue Essence">
+                </div>
+        </header>
+
+        <main class="Content">
+            <div class="Menu">
+                <p> <img src="All-Icon.png"> </p>
+                <p> <img src="Chest-Icon.png"> </p>
+                <p> <img src="Champions-Icon.png"> </p>
+                <p> <img src="Skins-Icon.png"> </p>
+                <p> <img src="Legends-Icon.png"> </p>
+                <p> <img src="Flame-Icon.png"> </p>
+                <p> <img src="Gesto-Icon.png"> </p>
+                <p> <img src="Ward-Icon.png"> </p>
+                <p> <img src="Icons-Icon.png"> </p>
+            </div>
+            <div class="MyItems">
+                <div class="Filters">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar">
+                        <select>                    
+                            <option>Alfabético</option>
+                            <option>Rareza</option>
+                            <option>Valor</option>
+                            <option>Activable</option>
+                        </select>
+                    <i class="fas fa-sort"></i>
+                </div>
+                <div class="Materials">
+                    <p>MATERIALES</p>
+                        <img src="ChestH2.png" onclick="ChestView()">
+                        <img src="Key.png" onclick="KeyView()">
+                        <img src="Gem.png" onclick="GemView()">
+                        <img src="Prestige.png" onclick="PrestigeView()">
+                        <img src="Sett.png" onclick="SettView()">
+                        <img src="Blitz.png" onclick="NoHaySistema()">
+                        <img src="Camille.png" onclick="NoHaySistema()">
+                        <img src="Cho.png" onclick="NoHaySistema()">
+                        <img src="Ekko.png" onclick="NoHaySistema()">
+                        <img src="Graves.png" onclick="NoHaySistema()">
+                        <img src="Kayle.png" onclick="NoHaySistema()">
+                        <img src="Kayn.png" onclick="NoHaySistema()">
+                        <img src="K6.png" onclick="NoHaySistema()">
+                        <img src="Lisin.png" onclick="NoHaySistema()">
+                        <img src="TF.png" onclick="NoHaySistema()">
+                        <img src="Nocturne.png" onclick="NoHaySistema()">
+                    <p>CAMPEONES</p>
+                        <img src="Jax.png" onclick="NoChamp()">
+                        <img src="Jinx.png" onclick="NoChamp()"> 
+                        <img src="Yasuo.png" onclick="NoChamp()">
+                        <img src="Nunu.png" onclick="NoChamp()">
+                        <img src="Ahri.png" onclick="NoChamp()">
+                        <img src="Amumu.png" onclick="NoChamp()">
+                        <img src="Camil.png" onclick="NoChamp()">
+                    <p>ASPECTOS</p>
+                        <img src="YasuoL.png" onclick="YasuoView()">
+                    <p>MINILEYENDAS</p>
+                        <img src="MiniLey.png" onclick="MiniView()">
+                    <p>ETERNOS</p>
+                        <img src="Eternos.png" onclick="ViewEternos()">
+                        <img src="Eternos2.png" onclick="ViewEternos2()">
+                    <p>GESTOS</p>
+                        <img src="Pengui.png" onclick="ViewPengui()">
+                        <img src="Uju.png" onclick="ViewUju()">
+                        <p id="CENTINELAS">CENTINELAS</p>
+                        <img src="WardLagartija.png" onclick="NoHaySistema()">
+                        <img src="WardBlue.png" onclick="NoHaySistema()">
+                        <img src="WardOscuro.png" onclick="NoHaySistema()">
+                    <p>ICONOS</p>
+                        <img src="Amanecer.png" onclick="NoHaySistema()">
+                </div>
+                <div class="Count">
+                    <button>+<img src="BtnChest.png"></button>
+                    <img src="Objects.png">
+                </div>
+            </div>
+            <div class="View" id="View">
+            </div>
+        </main>
+
+        <aside class="Aside">
+            <header class="User">
+                <div class="Level">
+                    <img src="Lux.jpg">
+                </div>
+                <div class="Name">
+                    <div class="GroupConfig">
+                        <i class="fas fa-question"></i>
+                        <i class="fas fa-minus"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="UserName">
+                        <p>Un Manco Más :(</p>
+                    </div>
+                    <div class="Status">
+                        <i class="far fa-circle" id="Circle" onclick="ChangedStatus()"></i>
+                        <p id="Par">"Main setto"</p>
+                    </div>
+                </div>
+            </header>
+            <div class="Social">
+                <p>SOCIAL</p>
+                    <div class="GroupSocial">
+                        <i class="fas fa-user-plus"></i>
+                        <i class="fas fa-folder-plus"></i>
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-search"></i>
+                    </div>
+            </div>
+            <div class="OnlineCount" onclick="ViewList()">
+                <p><i class="fas fa-caret-down" id="Arrow"></i> GENERAL (2/20)</p>
+            </div>
+            <div class="FriendList" id="FriendList">
+                <div class="Online">
+                    <div class="Avatar">
+                        <img src="Soraka.jpg">
+                    </div>
+                    <div class="NickStatus">
+                        <p>Manco 1</p>
+                        <p>Creando partida normal</p>
+                    </div>
+                </div>
+                <div class="Playing">
+                    <div class="Avatar2">
+                        <img src="Veigar.jpg">
+                    </div>
+                    <div class="NickStatus2">
+                        <p>Manco 2</p>
+                        <p>En partida</p>
+                    </div>
+                </div>
+                <div class="Absent">
+                    <div class="Avatar3">
+                        <img src="X&R.jpg">
+                    </div>
+                    <div class="NickStatus3">
+                        <p>Manco 3</p>
+                        <p>Ausente</p>
+                    </div>
+                </div>
+                <div class="Offline">
+                    <div class="Avatar4">
+                        <img src="Teemo.jpg">
+                    </div>
+                    <div class="NickStatus4">
+                        <p>Manco 4</p>
+                        <p>Desconectado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Version">
+                    <button><i class="fas fa-comment-alt"></i></button>
+                    <button><i class="fas fa-scroll"></i></button>
+                    <button><i class="fas fa-microphone"></i></button>
+                    <button>V.10.15</button>
+                    <button><i class="fas fa-bug"></i></button>
+
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="LoLInventory.js"></script>
+
+</body>
+</html>
